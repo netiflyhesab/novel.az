@@ -1,0 +1,2561 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="Website icon" href="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/link-hyperlink-icon.png">
+    <title>Link.az</title>
+
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #303030;
+} 
+nav{
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 750px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 750px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   
+    
+}
+
+
+
+.kitab{
+    width: 200px;
+    height: 315px;
+    background: linear-gradient(120deg,#0559b2,#ca9809);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 15px;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.kitab1{
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(120deg,#0559b2,#ca9809);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 15px;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+span{
+    font-size: 30px;
+}
+
+i{
+    margin: 10px;
+}
+
+.basliq{
+  font-size: 34px;
+  color: rgb(103, 173, 11);
+  
+}
+
+.bas{
+  text-align: center;
+}
+
+.resm{
+  background-image: url("https://www.abiturient.az/storage/projects/English_TT_1_az_2023.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm1{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/1694449147_mir_az-ekran-resmi-2023-09-09-19_19_14.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm2{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/1706701952_images.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left:30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm3{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/mir_az-ge-catalog-kitablar-dim-test_toplusu_kimya_2020-az_hisse2.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm4{
+  background-image: url("https://mir.az/uploads/posts/2023-12/Mir.az-screenshot_2023-12-08-16-45-29-85_2c052828f9bc068f981717dba52f469b.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm5{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/sddefault-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm6{
+  background-image: url("https://mir.az/uploads/posts/2023-10/Mir.az-english_tt_1_az_2023-1-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm7{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/photo_2022-02-10_05-57-04.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm8{
+  background-image: url("https://eduroom.az/uploads/posts/2024-04/3046cc8d28_ekran-resmi-2024-04-08-00_35_23.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm9{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/mir_az-ekran-resmi-2023-09-09-19_35_29.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm10{
+  background-image: url("https://www.kitabyurdu.org/uploads/posts/2021-06/1622538084_0001-1727250308_20210522_215254_0000.png");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm11{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:88669/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm12{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:198560/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm13{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11842430/wh:true/wi:500");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm14{
+  background-image: url("https://iletisim.com.tr/Images/UserFiles/Images/Spot/kotu-kalp.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm15{
+  background-image: url("https://imgv2-1-f.scribdassets.com/img/document/677167027/original/133893721c/1723092856?v=1");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm16{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/mir_az-ekran-resmi-2024-01-10-17_43_06.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm17{
+  background-image: url("https://imgv2-1-f.scribdassets.com/img/document/629180519/original/c24a72e233/1719039693?v=1");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm18{
+  background-image: url("https://i.pinimg.com/736x/11/c7/b5/11c7b52d8f37e570ac9867ff94b6f11f.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm19{
+  background-image: url("https://eduroom.az/uploads/posts/2023-02/1672384156_mir_az-ekran-alintisi.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm20{
+  background-image: url("https://mir.az/uploads/posts/2024-07/93c00adb90_9786059585422_genc-sherlock.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm21{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11320846/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm22{
+  background-image: url("https://1k-cdn.com/resimler/kitaplar/2270639_1715103507_da0Xi.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm23{
+  background-image: url("https://mir.az/uploads/posts/2024-08/25a91644ab_kitablarmiraz-11.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm24{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:3356390/wh:true/wi:500");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm25{
+  background-image: url("https://productimages.hepsiburada.net/s/45/375-375/10824505262130.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm26{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11218412/wh:true/miw:200/mih:200");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm27{
+  background-image: url("https://www.libraff.az/images/from_1c/a32fbc35-9fce-11ee-a53e-503eaa120fc7_1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm28{
+  background-image: url("#");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm28{
+  background-image: url("https://mir.az/uploads/posts/2023-03/Mir.az-ekran-resmi-2023-03-03-21_40_19.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm29{
+  background-image: url("https://eduroom.az/uploads/posts/2023-06/mir_az-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm30{
+  background-image: url("https://qlobuskitab.az/wp-content/uploads/2023/08/20230812_191138.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm31{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/mir_az-ekran-resmi-2023-04-22-22_23_02.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm32{
+  background-image: url("https://kitabevim.az/wp-content/uploads/2023/08/photo_2023-08-12_16-20-04-7-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm33{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPN-csUxMcG4KyHKzcwMQTAFMt8GLzbwy9Wg&s");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm34{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/mir_az-ekran-resmi-2023-10-17-19_49_04.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm35{
+  background-image: url("https://kitablar.com/data/books/bk1361/cover.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm36{
+  background-image: url("https://eduroom.az/uploads/posts/2023-10/mir_az-959f8d8ce9422f156d38f50631.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm37{
+  background-image: url("https://static.nadirkitap.com/fotograf/226982/7/Kitap_20161124023245_226982_3.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm38{
+  background-image: url("https://i.dr.com.tr/cache/600x600-0/originals/0000000056574-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm39{
+  background-image: url("https://m.media-amazon.com/images/I/41df2cdc+1L._AC_UF1000,1000_QL80_.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm40{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11876100/wh:true/miw:200/mih:200");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm41{
+  background-image: url("https://static.insales-cdn.com/images/products/1/4002/759852962/large_0000000688769-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm42{
+  background-image: url("https://mir.az/uploads/posts/2024-08/38d4a7a425_kitablarmiraz-13.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm43{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11650808/wh:true/miw:200/mih:200");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm44{
+  background-image: url("https://eduroom.az/uploads/posts/2023-12/1702026790_cografiya_tt_1_az_2023.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm45{
+  background-image: url("https://mir.az/uploads/posts/2022-12/Mir.az-ge-catalog-kitablar-dim-test_toplusu_cografiya_2020-az_hisse2.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm46{
+  background-image: url("https://eduroom.az/uploads/posts/2024-03/1710385721_indir-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm47{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/1705774913_hqdefault.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm49{
+  background-image: url("https://mir.az/uploads/posts/2024-08/58fe069e42_haw.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm50{
+  background-image: url("https://mir.az/uploads/posts/2024-08/25644fc380_kitablarmiraz-10.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm51{
+  background-image: url("https://ebooks.az/image/cover/RpHSIyqF");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm52{
+  background-image: url("https://i.dr.com.tr/cache/500x400-0/originals/0000000374464-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm53{
+  background-image: url("https://tr.web.img4.acsta.net/pictures/bzp/01/56899.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm54{
+  background-image: url("https://mir.az/uploads/posts/2023-10/1697536810_Mir.az-ekran-resmi-2023-10-17-13_58_25.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm55{
+  background-image: url("https://eduroom.az/uploads/posts/2024-08/abit_n2-az_2024.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm56{
+  background-image: url("https://img.kitapyurdu.com/v1/getImage/fn:11077239/wh:true/wi:800");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm57{
+  background-image: url("https://eduroom.az/uploads/posts/2024-02/mir_az-ekran-resmi-2024-02-08-12_23_53.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm58{
+  background-image: url("https://eduroom.az/uploads/posts/2023-10/1674229792_mir_az-2406e39b4d7dd8101ce49b8185.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm59{
+  background-image: url("https://eduroom.az/uploads/posts/2024-01/biologiya_tt_1_az_2023.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.resm60{
+  background-image: url("https://mir.az/uploads/posts/2024-02/Mir.az-ekran-resmi-2024-02-22-21_28_51.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm64{
+  background-image: url("https://mir.az/uploads/posts/2023-04/1682249303_Mir.az-wi_220-7-2.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm65{
+  background-image: url("https://mir.az/uploads/posts/2024-08/ea14a10fc9_1644327448_3.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm66{
+  background-image: url("https://mir.az/uploads/posts/2024-08/5188c217d9_0002094558001-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm67{
+  background-image: url("https://imgv2-2-f.scribdassets.com/img/document/629486316/original/6eabb88672/1716355128?v=1");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm68{
+  background-image: url("https://eduroom.az/uploads/posts/2023-09/photo_2023-04-25_07-45-32.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm69{
+  background-image: url("https://kitabevim.az/wp-content/uploads/2022/11/photo_2022-11-27_23-01-53.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm70{
+  background-image: url("https://mir.az/uploads/posts/2024-08/308e46aef8_ekran-goruntusu-2024-08-19-230313.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm71{
+  background-image: url("https://mir.az/uploads/posts/2023-01/1672732400_Mir.az-indir-2.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm72{
+  background-image: url("https://mir.az/uploads/posts/2024-08/e2b776a9c2_2022-10-07-09-50-061665121806.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm73{
+  background-image: url("https://mir.az/uploads/posts/2023-08/Mir.az-img_1960.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm74{
+  background-image: url("https://mir.az/uploads/posts/2023-03/Mir.az-0000000435076-1-1.webp");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.resm75{
+  background-image: url("https://i.dr.com.tr/cache/500x400-0/originals/0000000199327-1.jpg");
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  margin-left: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.text{
+  color: #f2f2f2;
+  margin-top: 25px;
+}
+
+.nov{
+  color: blue;
+  font-size: 14px;
+  margin: 10px;
+}
+
+button{
+  font-size: 15px;
+  padding: 1px 15px;
+  border-radius: 10px;
+  background: linear-gradient(120deg,#0559b2,#ca9809);
+  
+}
+
+.button:hover{
+  background-color: black;
+  
+  
+  transition: 0.5s;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+ 
+  color: #fff;
+  transition: 0.5s;
+  
+}
+
+@media only screen and (max-width: 760px){
+            .content{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                width: 100%;
+                
+                
+       }
+}
+
+
+
+@media only screen and (max-width: 760px){
+            .kitab{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab1{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab2{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab3{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab4{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab5{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .kitab6{
+                width: 150px;
+                margin: 15px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm1{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm2{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm3{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm4{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm5{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm6{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm7{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm8{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm9{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm10{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm11{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm12{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm13{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm14{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm15{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm16{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm17{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm18{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm19{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm20{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm21{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm22{
+                margin-left: 5px;
+       }
+}
+
+
+@media only screen and (max-width: 760px){
+            .kitab1{
+              width: 200px;
+       }
+}
+
+@media only screen and (max-width: 760px){
+            .resm23{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm24{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm25{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm26{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm27{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm28{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm29{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm30{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm31{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm32{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm33{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm34{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm35{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm36{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm37{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm38{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm39{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm40{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm41{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm42{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm43{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm44{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm45{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm46{
+                margin-left: 5px;
+       }
+} 
+
+@media only screen and (max-width: 760px){
+            .resm49{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm50{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm51{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm52{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm53{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm54{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm55{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm56{
+                margin-left: 5px;
+       }
+}   
+@media only screen and (max-width: 760px){
+            .resm57{
+                margin-left: 5px;
+       }
+} 
+@media only screen and (max-width: 760px){
+            .resm58{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm59{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm60{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm64{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm65{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm66{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm67{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm68{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm69{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm70{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm71{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm72{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm73{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm74{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm75{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm81{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm82{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm83{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm84{
+                margin-left: 5px;
+       }
+}
+@media only screen and (max-width: 760px){
+            .resm85{
+                margin-left: 5px;
+       }
+}
+#find{
+  font-size: 25px;
+  border: none;
+  border-bottom: solid 0.5px #fff;
+  width: 100%;
+  background-color: #303030;
+  color: white;
+}
+
+#ss{
+  font-size: 25px;
+  color:#f2f2f2
+}
+
+.onerilen{
+  display: flex;
+  width: 100%;
+  overflow-x: scroll ;
+  
+}
+  
+  .search{
+    display: flex;
+  }
+
+  .abt{
+    font-size: 19px;
+    color: yellow;
+   
+    margin-top: 10px;
+    
+    border-radius: 20px;
+    padding: 15px 20px;
+   
+    display:flexbox;
+
+
+}
+.about{
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    background: linear-gradient(100deg,#0559b2,#ca9809);
+    border-radius: 30px;
+   
+    
+    
+    
+}
+
+.about:hover{
+            transform: translateY(-280px);
+            transition: 0.8s;
+            background: linear-gradient(100deg,#0559b2,#ca9809);
+            height: 700px;
+            border-radius: 30px;
+
+            
+}
+.mel{
+  font-size: 16px;
+  color: yellow;
+}
+
+
+
+
+/*language*/
+
+#lang{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 12px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+
+#lg{
+   
+    position: fixed;
+    bottom: 67px;
+    left: 20px;
+    background: linear-gradient(100deg,#0559b2,#ca9809);
+    border-radius: 10px;
+    color: white;
+    
+   display: none ;
+}
+li{
+    list-style: none;
+    padding: 16px 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.es:hover{
+    
+    background-color: #343c40;
+    transition: 0.3s;
+}
+img{
+    width: 16px;
+    border-radius: 100%;
+    height: 16px;
+}
+.a{
+    color: white;
+    font-weight: bold;
+}
+
+/*chatbot*/
+
+
+.chat-header a{
+    text-decoration:none;
+    color: white;
+}
+
+.copyright{
+    font-size:12px;
+    text-align: center;
+}
+
+.copyright a {
+    text-decoration:none;
+    color: #343c41;
+}
+.i{
+  font-size: 23px;
+}
+#chatbot-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 9px 7px;
+    border: none;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001; /* Ensure the button is above the chatbot popup */
+}
+
+
+
+.chatbot-popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #303030;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 90%;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: black;
+    color: #fff;
+    padding: 15px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-box {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 15px 20px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    font-family: "Poppins";
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+}
+
+#send-btn {
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    border: none;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #0074CC;
+}
+
+.user-message {
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 14px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 10px; /* Push user message to the left */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Move user message to the right */
+}
+
+.user-message::before {
+    
+    position: absolute;
+    bottom: -17px;
+    right: -20px;
+    margin-bottom: 7px;
+    font-size: 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.bot-message {
+    background-color: black;
+    color: #fff;
+    padding: 14px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    align-self: flex-start; /* Move bot message to the left */
+    margin-right: 10px; /* Push bot message to the right */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Adjust for button placement */
+}
+
+.bot-message::before {
+    
+    width: 20px;
+    position: absolute;
+    bottom: -17px;
+    left: -14px;
+    margin-bottom: 4px;
+    font-size: 20px;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.button-container button {
+    padding: 10px 50px;
+    border: none;
+    background-color: #1087FF;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0074CC;
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="logo"><i class="fa-solid fa-link"></i>Link.az</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Textbook</a></li>
+          <li><a class="active"  href="#">Novels</a></li>
+          <li><a href="">Contact</a></li>
+          
+        </ul>
+    </nav>
+
+    <br>
+      
+    <br>
+    <br> 
+      <br>
+      <br>
+      <div class="bas">
+      <span class="basliq">
+        <i class="fa-regular fa-sun"></i>İŞIĞA GEDƏN YOL<i class="fa-regular fa-sun"></i>
+      </span>
+      </div>
+      <br>
+      
+      
+
+      <br><br><div class="search"><i id="ss" class="fa-solid fa-magnifying-glass"></i><input type="text" name="" id="find" placeholder="Kitab axtar..." onkeyup="search()"></div>
+      <div class="content">
+        <div class="kitab">
+          <div class="resm10">
+
+          </div>
+          <div class="text">
+            <h5>44 Gün</h5>
+          </div>
+          <div class="nov">
+            <br>Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/8YRTHBZC#zc74w9n7uuEhGvE7hLTZ-rpFV-e8puqg1yr5xpagOKY" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Bu kitab 44 günlük müharibə ərəfəsində baş verən əhvalatlardan danışılır.</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm11">
+
+          </div>
+          <div class="text">
+            <h5>Mayısta 7 Gün</h5>
+          </div>
+          <div class="nov">
+            <br>Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/kBR3yCiZ#sTyd5OY-bvh_zRZEcCouW9M3C0gkGuip_gy5L-78KJs" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Olağanüstü gerilimi ve akıcılığıyla Mayıs'ta Yedi Gün ezici şüphelerle dolu bir başyapıt. Yıkıcı bir askeri komplonun nasıl yapıldığını gösteren bir eser.</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm12">
+
+          </div>
+          <div class="text">
+            <h5>Ağaç şarkı <br>söyleyince</h5>
+          </div>
+          <div class="nov">
+            Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/BYh32B6L#HvrIYFB62BrMLzI_fl4hjcMhEx8k59-EpVHIHxdubnY" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Düşman askerlerin bir köye yaptıklarını bize anlatan eser.</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm13">
+
+          </div>
+          <div class="text">
+            <h5>Ay eşleşmesi</h5>
+          </div>
+          <div class="nov">
+            <br>Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/1UoVyRSI#i0BCuS4360imS7tgjhGZvidIeCBFlkDMQz5yGHsHqz4" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Çin astrologiyasına əsaslanan, düşmənlərin sevgililərinə çevrilmiş romantik komediya, şübhəsiz ki, oxucular üçün mükəmməl uyğunluq olacaq.</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm14">
+
+          </div>
+          <div class="text">
+            <h5>Kötü Kalp</h5>
+          </div>
+          <div class="nov">
+            <br>Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/tAAyBbxQ#R94AcZBKdhws6AyR4yuP48lAUBCddVAU14Dt839zrwM" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Kötü Kalp, adaleti hak edip de alamamışların, intikam isteyenlerin muamma yüklü romanı</span>
+      </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm70">
+
+          </div>
+          <div class="text">
+            <h5>Sayrışan<br>Ulduzlar</h5>
+          </div>
+          <div class="nov">
+            Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/cVYTCbhL#m8DBsNAV3vwwOu9e0a36hCjra_ERBPozwsgBvfF9JbU" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Bir müddət ərzində türklərin və azərbaycanlıların başına açdıqları saysız-hesabsız müsibətlərdə ermənilər yalnız bir məqsəd güdüblər:</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm71">
+
+          </div>
+          <div class="text">
+            <h5>M.Kaku Zihnin<br>Geleceği</h5>
+          </div>
+          <div class="nov">
+            Elmi
+          </div>
+          <button class="but"><a href="https://mega.nz/file/QR4yXZgT#m9Z9kaA6urn0qZ-5TtvLhHxc8VTBsznP0hfO_q9GDps" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Kitab telepatiya, ağılın idarə edilməsi, yuxuların qeydə alınması kimi mövzularda laboratoriyalarda aparılan ən son araşdırmaları və nəticələri təqdim edir.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm72">
+
+          </div>
+          <div class="text">
+            <h5>İlin beşinci <br>Fəsli</h5>
+          </div>
+          <div class="nov">
+            Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/ENY23BDY#ao1iTUNSdxSGIgUYQIeP2vCKivisMl0Za_2iXx6I4Fg" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>“Tələbə taqımından“ sonra bu, müəllifin müharibə mövzusunda üçüncü, İkinci Qarabağ müharibəsi haqqında ədəbiyyatımızda ilk romandır.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm21">
+
+          </div>
+          <div class="text">
+            <h5>China Mieville-Elçilik kəndi</h5>
+          </div>
+          <div class="nov">
+            Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/AZJ1gCDR#TQVgMQ_atQfj2G3mP3084YA1K5y9yI8Hd-RZs5UTJZ4 " download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel">Kitabın baş qəhrəmanı dalğıc Avice Benner Cho, Xaricdə yaşadığı macəralardan və əldə etdiyi təcrübələrdən sonra qayıtdığı Arieka qədər mürəkkəb və sirlidir.</span>
+          </div>
+          
+        </div>
+
+        
+
+        <div class="kitab">
+          <div class="resm22">
+
+          </div>
+          <div class="text">
+            <h5>Fəxrəddin Qasımoğlu-Ruh</h5>
+          </div>
+          <div class="nov">
+            Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/BNIy1Tha#6E_evaoM4lT0iteYETyNypQeG2N4dvDNHh5Nm9o3u_k" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Burada insanların özləri də bilmədən ələ verən vərdişlərinə bələd olan qəhrəmanın müşahidələri diqqət çəkir.İşi araşdırmağa başlayan detektivin diqqətini çəkən bəzi detallar gedişatda təsdiqlənməyə başlayır.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+            <div class="resm73">
+
+            </div>
+            <div class="text">
+              <h5>On birdən<br>qaçış</h5>
+            </div>
+            <div class="nov">
+              Roman
+            </div>
+            <button class="but"><a href="https://mega.nz/file/0ZAUQS6A#TpE4UJx80QvoQ15uN3FROV99ZVju4aez3QSN9C8gqcQ" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+            <div class="about">
+              <span class="abt">About</span><br><span class="mel"><h5>Jerri Chisholmun seçilmiş əsərlərindən biridir.</h5></span>
+            </div>
+          </div>
+
+          <div class="kitab">
+            <div class="resm74">
+
+            </div>
+            <div class="text">
+              <h5>Agatha-Iskemlede beş ceset</h5>
+            </div>
+            <div class="nov">
+              Roman
+            </div>
+            <button class="but"><a href="https://mega.nz/file/QIxyQZKZ#Op9vZLOR64Pt4LhvlrMH-DLM_pFMf4jsM4UxtAV04uI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+            <div class="about">
+              <span class="abt">About</span><br><span class="mel"><h5>Aqata Kristinin seçilmiş əsərlərindən biridir.</h5></span>
+            </div>
+          </div>
+
+          <div class="kitab">
+            <div class="resm75">
+
+            </div>
+            <div class="text">
+              <h5>Agatha<br>Iz üzərində</h5>
+            </div>
+            <div class="nov">
+              Roman
+            </div>
+            <button class="but"><a href="https://mega.nz/file/RMojGTBY#9pHiWvJJz7mmZdyWeGrujOWDuY70xIl-4-GYD7o5SdM" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+            <div class="about">
+              <span class="abt">About</span><br><span class="mel"><h5>Aqata Kristinin seçilmiş əsərlərindən biridir.</h5></span>
+            </div>
+          </div>
+
+        <div class="kitab">
+          <div class="resm23">
+
+          </div>
+          <div class="text">
+            <h5>Partizanın acı<br>həqiqətləri</h5>
+          </div>
+          <div class="nov">
+           Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/lY5FiaKB#n1Zhc9Re8tXqG_tYF5MjIlzq1EYfBGP0Uej_UFC0vGI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Gənc müəllifin sayca 4-cü olan "Partizanın acı həqiqətləri" kitabında İkinci Dünya müharibəsi iştirakçısı, partizan Mirdamət Seyidovun keçdiyi şərəfli yol izlənilir.</h5></span>
+          </div>
+        </div>
+
+        <div class="kitab">
+          <div class="resm24">
+
+          </div>
+          <div class="text">
+            <h5>Laura Dave-Sekiz Yüz Üzüm</h5>
+          </div>
+          <div class="nov">
+           Roman
+          </div>
+          <button class="but"><a href="https://mega.nz/file/lJ4SjbrS#mVV6kRL_Bzs1q_2JPeK9-J4_UWetxJ85tAoPTaIJZwI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+          <div class="about">
+            <span class="abt">About</span><br><span class="mel"><h5>Georgia, nişanlısının sirrini öyrəndiyində maşınına atılıb ailə evinə geri dönür. Halbuki o yoxkən çox şey dəyişmişdir. Küskünlüyünün dumanlı pərdəsi dağıldıqca ailəsinin qaranlıq sirləri ilə üzləşmək məcburiyyətində qalır.</h5></span>
+          </div>
+        </div>
+        
+        
+            <div class="kitab">
+              <div class="resm25">
+
+              </div>
+              <div class="text">
+                <h5>Maxime Rovere-Ne yapmalı</h5>
+              </div>
+              <div class="nov">
+                Fəlsəfə
+              </div>
+              <button class="but"><a href="https://mega.nz/file/cNgVwbLB#otxOrr6rZlGTf5RVmM9Tm0H54VXb1O4Ss_4-EdEQ6a8" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel"><h5>Küçədə rast gəlinən minlərlə halda - yolunuzu kəsən bir maşın, itini tekiləyən və ya yerlərə zibil atan biri kimi - digərlərinə hörmət etməmək və ortaq yaşama şəraitini pozan axmaq şəxsdən danışmaq olar.</h5></span>
+              </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm20">
+
+              </div>
+              <div class="text">
+                <h5>Gənc Şerlok - David Stuart</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/oVgRnSQK#6hCRkyGlRoT6LlBqYdetWjKPptcjWxQH0j7vvGuDhME" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel"><h5>Holmes’ün gençlik günlerinden başlayan Yeni Maceralar serisi, dünyanın en büyük dedektifinin en gerilimli ve farklı davalarının sırlarını çözüyor.</h5></span>
+              </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm26">
+
+              </div>
+              <div class="text">
+                <h5>Konstantiniyye <br>Oteli</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/AUp1TLRa#QlD09QiFFhiZUeV4UoFJ6vk9BdIIpnL6DgvJ7x3orNo" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel"><h5>2014 yılı Aralık ayının son günleri.7 yıldızlı Konstantiniyye Oteli’nin açılış günü İstanbul’un seçkin simaları Sultanahmet’teki eski Bizans sarayının kalıntıları üzerine yapılan otelde bir araya geliyor. </h5></span>
+              </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm40">
+    
+              </div>
+              <div class="text">
+                <h5>Tom Robbins-Parfümün dansı</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/IEoS3Iha#XDkGl-1_-e1uW77lnuFQvGWD6VzMLvnG1ayFf_14zHE" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Parfümün Dansı, Tom Robbins'in parfümün doğuşu üzerine yazdığı fantastik bir kitap.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm41">
+    
+              </div>
+              <div class="text">
+                <h5>Nikola Tesla<br>Buluşlarım</h5>
+              </div>
+              <div class="nov">
+               Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/MVIVHDJA#O8U-vltEmx98YuIgCs2x_QNKe0cShiLKS78pgSyFeos" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Onun adı tez-tez Tomas Edisonla elmi mübarizəsi ilə əlaqələndirilsə də, Nikola Tesla bəlkə də bütün zamanların ən mühüm ixtiraçılarından biridir.Kitab onun ixtiralarından bəhs edir.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm42">
+    
+              </div>
+              <div class="text">
+                <h5>Nurlan Quliyeva-Sirli Kainat</h5>
+              </div>
+              <div class="nov">
+               Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/oE5kiI6L#ZqQ78MT32Fw6yoUegO8j41frgl5LpJeVir7ArKkp7OI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Rugonların yüksəlişi bizə uzaq və xəyalpərəst bir əyalət şəhərində o dövrün Fransa cəmiyyətini viran qoyan siyasi hadisələrin nəticələrini izah edir.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm43">
+    
+              </div>
+              <div class="text">
+                <h5>Rougonların<br> yüksəlişi</h5>
+              </div>
+              <div class="nov">
+               Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/UI4TySCS#9pMy1k-FMfO0MJSVbsMBKBIWa2o6pav0gj-p1SJKjVI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Rugonların yüksəlişi bizə uzaq və xəyalpərəst bir əyalət şəhərində o dövrün Fransa cəmiyyətini viran qoyan siyasi hadisələrin nəticələrini izah edir.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm37">
+    
+              </div>
+              <div class="text">
+                <h5>Füruzan<BR>Parasız Yatılı</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/MBJjxRRS#LTRDzxx-_IkWhqPg-tFsQ5x4X9NMyzspgkalOt-jnN4" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">İlk yayımlandığı 1971 yılından beri okunan bir çağdaş klasik. "Ana-kız" temasından yola çıkarak genele ulaşan acılı bir öyküler kitabı.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm64">
+
+              </div>
+              <div class="text">
+                <h5>Beş Qəpiksizdim və Qadın Gözəldi</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/EBBXRYQZ#uZEq_bmf-2ckamBNA1n70Z-G1ryxVdllnd-Qw_2iIEw" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">İstanbulda gözəl qar yağırdı.Bir ildir getdiyim barda məni bir qadın tapdı və iki yüz min lirə təklif etdi ki, itkin atasını tapım.Beş qəpiksiz olduğum üçün işi qəbul etdim və qadın gözəl idi...</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm38">
+    
+              </div>
+              <div class="text">
+                <h5>Kırmızı <br>gören kedi</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/xMownZ7J#TSeiCPOg2xBHX02J8i5S2P1vx4ruuqiHZWCA2BljkyI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Cim Qvilleran narahatçılığına artan içki qiymətləri, qızardılmış balıq və pivə qoxusu və ya binanın köhnə həbsxana qoxusu səbəb olmayıb. Qvilleranın başqa problemi var idi.</span>
+          </div>
+            </div>
+    
+            <div class="kitab">
+              <div class="resm39">
+    
+              </div>
+              <div class="text">
+                <h5>Stephen King<br>Yaratık</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/Ud4UCbQT#fs3AQXCi6p7VP6jd50tQtaHJ6b5_InlAUj2hsXytToQ" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Tanrısal güçle kötülüklerin karşı karşıya geldiği bu romanda Stephen King, soluk soluğa bir maceraya çağırıyor okurlarını.</span>
+          </div>
+            </div>
+    
+            <div class="kitab">
+              <div class="resm27">
+    
+              </div>
+              <div class="text">
+                <h5>Anna Solyom<br>Neko Kafe</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/MFoQVCSQ#o7E_Sj8QRYYJ71WjKRe1nctPgRREcfdAo7RZqPD6b5g" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Bir insan hayal etmeyi bıraktığında, artık farklı bir şey olmasını beklemediğinde veya konfor alanının dışına çıkmaya cesaret edemediğinde ölmeye başlar."</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm56">
+    
+              </div>
+              <div class="text">
+                <h5>Gizli anların<br>yolcusu</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/pNRijb4I#UM7EAD49CKZfzmpU551RK0QlCoFHSvkO_KIwQSlbKc0" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel"><h5>Bu romanda yalnızca sevgini deyil, cəmiyyətin məcbur etdiyi həyatları, puça çıxmış uşaqlıqları, içindəki sirlərlə ən yaxınlarını yaralayan ailələrin hekayələrini nəfəs kəsən bir tempdə oxuyacaqsınız.</h5></span>
+              </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm49">
+    
+              </div>
+              <div class="text">
+                <h5>Kemal Varol<br>Haw</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/1NoQwbwZ#3eR8pN1Q3DWRKmrW8Ef5zF-j945WS8wZ-ndplb6AYH4" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Kemal Varol, zamanı aşan bir roman, hüzünlü bir edebiyat bileti sunuyor bize... Haw, sadece yeni değil sıcak ve güzel.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm65">
+
+              </div>
+              <div class="text">
+                <h5>Müharibənin qəhrəmanları</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/FB4CFBAI#PVkZVdowJD2wmFYD20uf8OzFtQKV6yqjopqYdEGxCoA" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Əsərin baş qəhrəmanı Natiq obrazı ilə zabit həyatı təsvir olunur.</span>
+          </div>
+            </div>
+
+            <div class="kitab">
+              <div class="resm66">
+
+              </div>
+              <div class="text">
+                <h5>M.Debbie<br>Alaska tatili</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/9QJXVCTD#bPAgOoRLuoyYk3SDjXjHw6li9D6AdMZk-V_3ooa1XcU" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Debbie Macomber, bu güzel kış hikâyesinde, evimizi aramak için çıktığımız uzun yolculukların aşkla nasıl güzelleştiğini, Alaska’nın eşsiz atmosferinin ev sahipliğinde anlatıyor.</span>
+          </div>
+            </div>
+
+    
+            <div class="kitab">
+              <div class="resm50">
+    
+              </div>
+              <div class="text">
+                <h5>M.Müşfiq<br>Məhəbbət</h5>
+              </div>
+              <div class="nov">
+                Şeir
+              </div>
+              <button class="but"><a href="https://mega.nz/file/oJoCzDjB#bRp7J-I571twY7qtoVCndHYsVdoocBWOrWDoKB1FQx4" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">"Gənclik" nəşriyyatının təşəbbüsü ilə nəşr olunmuş bu kitabın işıq üzü görməsində maddi yardımçımız olmuş Hafiz Məmmədova öz dərin minnətdarlığımızı bildiririk.</span>
+          </div>
+            </div>
+    
+            <div class="kitab">
+              <div class="resm51">
+    
+              </div>
+              <div class="text">
+                <h5>M.Müşfiq<br>Seçilmiş əsələr</h5>
+              </div>
+              <div class="nov">
+                Şeir
+              </div>
+              <button class="but"><a href="https://mega.nz/file/EJ43GapL#TpjDj8dOKhFeh45dIEhW8zShYdfcWHfbLM-mz_Ilujc" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Unudulmaz şairimizin seçmə əsərlərindən ibarət olan bu kitabda müxtəlif illərin şeirləri, poemaları, eləcə də uşaqlar üçün şeirləri toplanmışdır.</span>
+          </div>
+            </div>
+    
+            <div class="kitab">
+              <div class="resm52">
+    
+              </div>
+              <div class="text">
+                <h5>Ben tek<br>siz hepiniz</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/pJRzDRLB#NF_rIkA0_hzaDhpmnZ_Y7KHBD2fZV1Id2eswKgVniTI" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Hakan Bıçakcı tedirginliği, saplantıyı ve tatminsizliği ustaca anlatıyor. Romanlarındaki tekinsizliği bu defa hikâyeleriyle sürdürüyor.</span>
+          </div>
+            </div>
+    
+            <div class="kitab">
+              <div class="resm53">
+    
+              </div>
+              <div class="text">
+                <h5>Cennetimden<br>bakarken</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/hNRCETrD#kV_YwqOCiosj06QbdkGJw3RIwigIt6W6D_pnS-tjq94" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">"Bu kitab son səhifəni bitirdikdən çox sonra belə sizinlə qalır." -Daily Mail-</span>
+          </div>
+            </div>
+    
+            <div class="kitab">
+              <div class="resm28">
+    
+              </div>
+              <div class="text">
+                <h5>Stephen King<br>O</h5>
+              </div>
+              <div class="nov">
+                Roman
+              </div>
+              <button class="but"><a href="https://mega.nz/file/0AxR3TBC#if-ZM-GCxk20rPsVUgld5IlI24QYB2FzoV9kvkZeqEo" download="a"><i class="fa-solid fa-download"></i>Yüklə</a></button>
+              <div class="about">
+                <span class="abt">About</span><br><span class="mel">Tanrısal güçle kötülüklerin karşı karşıya geldiği bu romanda Stephen King, soluk soluğa bir maceraya çağırıyor okurlarını.</span>
+          </div>
+            </div>
+
+
+
+
+
+
+            <button id="lang" onclick="hide()"><img src="https://aztc.gov.az/uploads/flag.jpg"><b>    AZE</b></button>
+        <div id="lg">
+            <div class="diller">
+                <li class="es"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2560px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"><a href="" class="a"<b>     ENG</b></a></li>
+                
+            </div>
+        </div>
+
+            <button id="chatbot-toggle-btn"><i class="fas fa-link"></i></button>
+            <div class="chatbot-popup" id="chatbot-popup">
+                <div class="chat-header">
+                    <span>Link.az</a></span>
+                    <button id="close-btn">&times;</button>
+                </div>
+                <div class="chat-box" id="chat-box"></div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Type a message...">
+                    <button id="send-btn">Send</button>
+                </div>
+
+        
+
+            
+            
+    
+      <script type="text/javascript">
+        function search() {
+        let filter = document.getElementById('find').value.toUpperCase();
+        let item = document.querySelectorAll('.kitab');
+        let l = document.getElementsByTagName('h5');
+        for(var i = 0;i<=l.length;i++){
+        let a=item[i].getElementsByTagName('h5')[0];
+        let value=a.innerHTML || a.innerText || a.textContent;
+        if(value.toUpperCase().indexOf(filter) > -1) {
+        item[i].style.display="";
+        }
+        else
+        {
+        item[i].style.display="none";
+        }
+        }
+        }
+
+
+
+
+
+
+         //language
+
+         function hide() {
+          var x = document.getElementById("lg")
+          if(x.style.display ==="block"){
+            x.style.display = "none";
+          }
+          else{
+            x.style.display = "block";
+          }
+        }
+
+         //chatbot
+
+         const responses = {
+   "hi": "Hello! How can I help you today?",
+    "hello": "Hello! How can I help you today?",
+    "coding hubs": "Here you will get Notes, Ebooks, project source Code, Interview questions. visit Coding Hubs.<a href='https://thecodinghubs.com' target='_blank'>Visit Website</a>",
+    "how are you": "I'm just a robot, but I'm here to help you!",
+    "help": "How can I help you today?",
+    "thank": "Goodbye! Have a nice day!",
+    "thank you": "Goodbye! Have a nice day!",
+    "bye": "Goodbye! Have a nice day!",
+    "default": "Sorry, I didn't understand it, please write in English",
+    "No": "Well, if you change your mind, let me know!",
+    "how can i download books": "A very simple! click of the 'yüklə' button",
+     "how can ı download books": "A very simple! click of the 'yüklə' button",
+     "how ı download books": "A very simple! click of the 'yüklə' button",
+     "how to download books": "A very simple! click of the 'yüklə' button",
+     "download books": "A very simple! click of the 'yüklə' button",
+     "download book": "A very simple! click of the 'yüklə' button",
+     "download": "A very simple! click of the 'yüklə' button",
+     "downloads": "A very simple! click of the 'yüklə' button",
+     "how to download book": "A very simple! click of the 'yüklə' button",
+     "how ı download book": "A very simple! click of the 'yüklə' button",
+     "how can ı download book": "A very simple! click of the 'yüklə' button",
+     "how  i download books": "A very simple! click of the 'yüklə' button",
+     "how download": "A very simple! click of the 'yüklə' button",
+     "Who was the creator?": "Farid Mammadli",
+     "who is creator": "Farid Mammadli",
+     "creator?": "Farid Mammadli",
+     "creator": "Farid Mammadli",
+     "who is creator?": "Farid Mammadli",
+     "who creator?": "Farid Mammadli",
+     "who is he?": "Farid Mammadli",
+     "44 gün": "This book tells about the stories that happened on the eve of the 44-day war.",
+     "Kötü k": "With extraordinary tension and fluidity, Seven Days in Mayis is a masterpiece full of overwhelming suspense. A work that shows how a destructive military conspiracy was made.",
+     "YAradıcı": "Farid Mammadli is the creator of this site",
+     "Who was": "Farid Mammadli is the creator of this site",
+     "You are stupid": "I think you are stupid",
+     "02,06": "You are very beautiful :)",
+     "stupid": "I think you are stupid"
+
+
+
+
+
+
+};
+
+document.getElementById('chatbot-toggle-btn').addEventListener('click', toggleChatbot);
+document.getElementById('close-btn').addEventListener('click', toggleChatbot);
+document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('user-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+function toggleChatbot() {
+    var chatbotPopup = document.getElementById('chatbot-popup')
+    if (chatbotPopup.style.display === "block"){
+      chatbotPopup.style.display = "none";
+    }
+    else{
+      chatbotPopup.style.display = "block";
+    }
+    
+}
+
+function sendMessage() {
+    const userInput = document.getElementById('user-input').value.trim();
+    if (userInput !== '') {
+        appendMessage('user', userInput);
+        respondToUser(userInput.toLowerCase());
+        document.getElementById('user-input').value = '';
+    }
+}
+
+function respondToUser(userInput) {
+    const response = responses[userInput] || responses["default"];
+    setTimeout(function() {
+        appendMessage('bot', response);
+    }, 500);
+}
+
+function appendMessage(sender, message) {
+    const chatBox = document.getElementById('chat-box');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+    messageElement.innerHTML = message;
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    if (sender === 'bot' && message === responses["default"]) {
+        
+       
+        buttonYes.onclick = function() {
+            appendMessage('bot', responses["expert"]);
+        };
+        const buttonNo = document.createElement('button');
+        
+        buttonNo.onclick = function() {
+            appendMessage('bot', responses["no"]);
+        };
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container');
+        buttonContainer.appendChild(buttonYes);
+        buttonContainer.appendChild(buttonNo);
+        chatBox.appendChild(buttonContainer);
+    }
+}
+        </script>
+
+</body>
+</html>
